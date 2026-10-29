@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>小白教育互动课件 · 离线版</title>
+<style>
+:root{--ink:#1b2430;--ink2:#54626f;--line:#e3e8ee;--bg:#f4f6f8;--card:#fff;
+--brand:#2a4d69;--brand2:#0f7b8a;--chip:#e8f2f4;--green:#12795c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:15px/1.6 "PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif}
+header{background:linear-gradient(135deg,#22394d,#2a5d70 60%,#17798a);color:#fff;padding:42px 26px 34px}
+.wrap{max-width:1160px;margin:0 auto}
+.eyebrow{font-size:12.5px;letter-spacing:.16em;opacity:.85;margin:0 0 9px}
+h1{margin:0 0 9px;font-size:29px;letter-spacing:.02em}
+.sub{margin:0;opacity:.9;font-size:13.5px}
+.stats{display:flex;gap:24px;margin-top:20px;flex-wrap:wrap}
+.stats div{display:flex;align-items:baseline;gap:7px}
+.stats b{font-size:22px}
+.stats span{font-size:12.5px;opacity:.82}
+main{max-width:1160px;margin:0 auto;padding:28px 26px 60px}
+.note{background:#fff;border:1px solid var(--line);border-left:4px solid var(--brand2);
+border-radius:10px;padding:13px 17px;margin:0 0 24px;font-size:13.5px;color:var(--ink2)}
+.note b{color:var(--ink)}
+h2.sec{font-size:17px;margin:30px 0 14px;display:flex;align-items:center;gap:9px}
+h2.sec i{font-style:normal;font-size:15px;width:26px;height:26px;border-radius:7px;
+background:var(--chip);color:var(--brand2);display:grid;place-items:center;font-weight:700}
+h2.sec small{font-size:12.5px;color:#8494a1;font-weight:400}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:13px;overflow:hidden;
+text-decoration:none;color:inherit;display:flex;flex-direction:column;
+transition:transform .15s ease,box-shadow .15s ease,border-color .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 9px 22px rgba(20,50,70,.12);border-color:#bfd8de}
+.cover{aspect-ratio:16/10;background:#e5edf1;overflow:hidden}
+.cover img{width:100%;height:100%;object-fit:cover;display:block}
+.body{padding:12px 14px 15px;display:flex;flex-direction:column;gap:5px;flex:1}
+.chip{font-size:10.5px;font-weight:600;color:var(--brand2);background:var(--chip);
+padding:3px 8px;border-radius:99px;align-self:flex-start}
+h3{margin:1px 0 0;font-size:15.5px;line-height:1.4}
+p.t{margin:0;font-size:12.5px;color:var(--ink2);flex:1}
+.go{margin-top:6px;font-size:12.5px;font-weight:600;color:var(--green)}
+footer{max-width:1160px;margin:0 auto;padding:0 26px 46px;font-size:12.5px;color:#7d8b97}
+@media(max-width:560px){h1{font-size:22px}header{padding:30px 18px 26px}main{padding:20px 18px 40px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">小白教育 · 互动课件</p>
+    <h1>互动课件离线版</h1>
+    <p class="sub">双击 index.html 打开，单个课件是完整 HTML，可单独拷走</p>
+    <div class="stats">
+      <div><b>53</b><span>个课件</span></div>
+      <div><b>4</b><span>个学科</span></div>
+      <div><b>0</b><span>外部依赖</span></div>
+    </div>
+  </div>
+</header>
+<main>
+  <p class="note"><b>关于范围：</b>原站共 550 个课件，其中 53 个可免费下载（其余为付费资源，需购买后才能取到文件）。
+  本离线包收录的就是这 53 个可下载课件的全部内容。每个课件都是单文件 HTML，双击即可运行，也能单独发给别人。</p>
+  <h2 class="sec"><i>Φ</i>物理 <small>24 个课件</small></h2>
+  <div class="grid">
+    <a class="card" href="html/mirror.html">
+      <div class="cover"><img src="assets/covers/mirror.webp" alt="平面镜成像" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>平面镜成像</h3>
+        <p class="t">镜面观察 · 平面镜成像特点 · 反射光传播</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/lens.html">
+      <div class="cover"><img src="assets/covers/lens.webp" alt="凸透镜与凹透镜的成像规律" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>凸透镜与凹透镜的成像规律</h3>
+        <p class="t">透镜与光路 · 凸透镜成像探究 · 凹透镜与虚像</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/mirror-image.html">
+      <div class="cover"><img src="assets/covers/mirror-image.webp" alt="平面镜成像" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>平面镜成像</h3>
+        <p class="t">观察等大、等距的像，比较反射光路与虚像的位置。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/mirror-reflection.html">
+      <div class="cover"><img src="assets/covers/mirror-reflection.webp" alt="光的反射定律" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>光的反射定律</h3>
+        <p class="t">改变入射角，测量并比较入射角与反射角，观察光路可逆。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/mirror-construction.html">
+      <div class="cover"><img src="assets/covers/mirror-construction.webp" alt="平面镜成像作图" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>平面镜成像作图</h3>
+        <p class="t">逐点作垂线、取等距，作出物体的像。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/mirror-orientation.html">
+      <div class="cover"><img src="assets/covers/mirror-orientation.webp" alt="平面镜中的方向" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>平面镜中的方向</h3>
+        <p class="t">转动不对称物体，比较物体与镜像的空间方向。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/mirror-translation.html">
+      <div class="cover"><img src="assets/covers/mirror-translation.webp" alt="平面镜与物体的运动" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>平面镜与物体的运动</h3>
+        <p class="t">分别移动物体和镜面，观察像的位置变化。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/mirror-rotation.html">
+      <div class="cover"><img src="assets/covers/mirror-rotation.webp" alt="平面镜转动与反射光线" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>平面镜转动与反射光线</h3>
+        <p class="t">固定入射方向，观察镜面转动后的反射方向。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/mirror-experiment.html">
+      <div class="cover"><img src="assets/covers/mirror-experiment.webp" alt="探究平面镜成像的特点" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>探究平面镜成像的特点</h3>
+        <p class="t">用玻璃板定位像，再用光屏检验虚像。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/mirror-field-of-view.html">
+      <div class="cover"><img src="assets/covers/mirror-field-of-view.webp" alt="平面镜的视野" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>平面镜的视野</h3>
+        <p class="t">改变镜长、镜底高度和站立距离，比较可见范围。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/mirror-multiple-images.html">
+      <div class="cover"><img src="assets/covers/mirror-multiple-images.webp" alt="双平面镜成像" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>双平面镜成像</h3>
+        <p class="t">改变两镜夹角，观察多次反射成像。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/mirror-periscope.html">
+      <div class="cover"><img src="assets/covers/mirror-periscope.webp" alt="潜望镜" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>潜望镜</h3>
+        <p class="t">观察光线经过两面平面镜的反射。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/lens-paths.html">
+      <div class="cover"><img src="assets/covers/lens-paths.webp" alt="透镜对光的作用" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>透镜对光的作用</h3>
+        <p class="t">比较凸透镜会聚与凹透镜发散的光路。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/lens-convex.html">
+      <div class="cover"><img src="assets/covers/lens-convex.webp" alt="探究凸透镜成像的规律" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>探究凸透镜成像的规律</h3>
+        <p class="t">选择蜡烛或 F 形光源，依据焦距移动物体与光屏，探究像的大小和正倒。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/lens-concave.html">
+      <div class="cover"><img src="assets/covers/lens-concave.webp" alt="凹透镜成像" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>凹透镜成像</h3>
+        <p class="t">改变物距，观察凹透镜形成的正立缩小虚像。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/lens-errors.html">
+      <div class="cover"><img src="assets/covers/lens-errors.webp" alt="凸透镜成像实验的调整" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>凸透镜成像实验的调整</h3>
+        <p class="t">调节三心高度与光屏位置，观察像居中、部分离屏和完全离屏，并比较镜片遮挡。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/lens-apps.html">
+      <div class="cover"><img src="assets/covers/lens-apps.webp" alt="透镜的应用" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>透镜的应用</h3>
+        <p class="t">操作照相机、投影仪与放大镜，比较对焦和成像。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/nuclear-energy.html">
+      <div class="cover"><img src="assets/covers/nuclear-energy.webp" alt="核能、核裂变与核电站" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级全一册</span>
+        <h3>核能、核裂变与核电站</h3>
+        <p class="t">核电站 · 核裂变 · 链式反应</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/nuclear-energy-plant.html">
+      <div class="cover"><img src="assets/covers/nuclear-energy-plant.webp" alt="核电站" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级全一册</span>
+        <h3>核电站</h3>
+        <p class="t">观察核电站中能量转化与冷却循环。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/nuclear-energy-fission.html">
+      <div class="cover"><img src="assets/covers/nuclear-energy-fission.webp" alt="核裂变" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级全一册</span>
+        <h3>核裂变</h3>
+        <p class="t">观察一次核裂变及产生的粒子。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/nuclear-energy-chain.html">
+      <div class="cover"><img src="assets/covers/nuclear-energy-chain.webp" alt="链式反应" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级全一册</span>
+        <h3>链式反应</h3>
+        <p class="t">改变吸收条件，观察链式反应的控制。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/nuclear-energy-scatter.html">
+      <div class="cover"><img src="assets/covers/nuclear-energy-scatter.webp" alt="α粒子散射实验" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级全一册</span>
+        <h3>α粒子散射实验</h3>
+        <p class="t">观察α粒子的散射路径，认识原子核。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/mirror-fold-screen.html">
+      <div class="cover"><img src="assets/covers/mirror-fold-screen.webp" alt="折叠光屏实验" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>折叠光屏实验</h3>
+        <p class="t">折叠光屏，观察入射光线、反射光线与法线的平面关系。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/mirror-diffuse.html">
+      <div class="cover"><img src="assets/covers/mirror-diffuse.webp" alt="镜面反射与漫反射" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 八年级上册</span>
+        <h3>镜面反射与漫反射</h3>
+        <p class="t">比较平整与粗糙表面的反射，观察各处光线仍遵守反射定律。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+  </div>
+  <h2 class="sec"><i>H₂</i>化学 <small>12 个课件</small></h2>
+  <div class="grid">
+    <a class="card" href="html/chemistry-chem02.html">
+      <div class="cover"><img src="assets/covers/chemistry-chem02.webp" alt="空气与氧气" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级上册</span>
+        <h3>空气与氧气</h3>
+        <p class="t">通过含氧量探究、过氧化氢制氧和燃烧实验，比较空气组成及氧气的性质。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/chemistry-chem02-composition.html">
+      <div class="cover"><img src="assets/covers/chemistry-chem02-composition.webp" alt="空气的组成" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级上册</span>
+        <h3>空气的组成</h3>
+        <p class="t">观察空气中主要成分及其体积分数。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/chemistry-chem02-oxygen-content.html">
+      <div class="cover"><img src="assets/covers/chemistry-chem02-oxygen-content.webp" alt="测定空气中氧气的含量" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级上册</span>
+        <h3>测定空气中氧气的含量</h3>
+        <p class="t">红磷燃烧测定空气中氧气的含量，比较装置条件与测定结果。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/chemistry-chem02-catalyst.html">
+      <div class="cover"><img src="assets/covers/chemistry-chem02-catalyst.webp" alt="催化剂与氧气的制取" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级上册</span>
+        <h3>催化剂与氧气的制取</h3>
+        <p class="t">比较过氧化氢分解时加入催化剂前后的变化。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/chemistry-chem02-charcoal.html">
+      <div class="cover"><img src="assets/covers/chemistry-chem02-charcoal.webp" alt="木炭在氧气中燃烧" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级上册</span>
+        <h3>木炭在氧气中燃烧</h3>
+        <p class="t">观察木炭燃烧并检验生成物。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/chemistry-chem02-sulfur.html">
+      <div class="cover"><img src="assets/covers/chemistry-chem02-sulfur.webp" alt="硫在氧气中燃烧" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级上册</span>
+        <h3>硫在氧气中燃烧</h3>
+        <p class="t">比较硫在空气和氧气中的燃烧现象。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/chemistry-chem02-iron.html">
+      <div class="cover"><img src="assets/covers/chemistry-chem02-iron.webp" alt="铁丝在氧气中燃烧" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级上册</span>
+        <h3>铁丝在氧气中燃烧</h3>
+        <p class="t">操作铁丝燃烧实验，观察现象与装置要求。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/chemistry-chem02-splint.html">
+      <div class="cover"><img src="assets/covers/chemistry-chem02-splint.webp" alt="氧气的检验" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级上册</span>
+        <h3>氧气的检验</h3>
+        <p class="t">使用带火星的木条检验氧气。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/chemistry-c07.html">
+      <div class="cover"><img src="assets/covers/chemistry-c07.webp" alt="原子结构与元素辨认" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级上册</span>
+        <h3>原子结构与元素辨认</h3>
+        <p class="t">拖入或取出质子、中子和电子，比较原子与离子，并辨认氢至钙前 20 种元素。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/chemistry-c07-build.html">
+      <div class="cover"><img src="assets/covers/chemistry-c07-build.webp" alt="原子的构成" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级上册</span>
+        <h3>原子的构成</h3>
+        <p class="t">增减质子、中子和电子，观察原子的构成。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/chemistry-c07-ion.html">
+      <div class="cover"><img src="assets/covers/chemistry-c07-ion.webp" alt="离子的形成" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级上册</span>
+        <h3>离子的形成</h3>
+        <p class="t">改变电子数，观察阳离子与阴离子的形成。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/chemistry-c07-element.html">
+      <div class="cover"><img src="assets/covers/chemistry-c07-element.webp" alt="元素与质子数" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中 · 九年级上册</span>
+        <h3>元素与质子数</h3>
+        <p class="t">比较不同粒子，认识元素种类与质子数的关系。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+  </div>
+  <h2 class="sec"><i>⌁</i>地理 <small>12 个课件</small></h2>
+  <div class="grid">
+    <a class="card" href="html/terrain.html">
+      <div class="cover"><img src="assets/covers/terrain.webp" alt="等高线与地形图" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中、高中 · 初中</span>
+        <h3>等高线与地形图</h3>
+        <p class="t">等高线 · 地形判读 · 剖面与路线</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/terrain-altitude.html">
+      <div class="cover"><img src="assets/covers/terrain-altitude.webp" alt="海拔与相对高度" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中、高中 · 初中</span>
+        <h3>海拔与相对高度</h3>
+        <p class="t">比较海平面基准与两点的高度差。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/terrain-contours.html">
+      <div class="cover"><img src="assets/covers/terrain-contours.webp" alt="等高线的形成与等高距" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中、高中 · 初中</span>
+        <h3>等高线的形成与等高距</h3>
+        <p class="t">升降水平切面，将交线投影成图并改变等高距。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/terrain-slope.html">
+      <div class="cover"><img src="assets/covers/terrain-slope.webp" alt="等高线疏密与坡度" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中、高中 · 初中</span>
+        <h3>等高线疏密与坡度</h3>
+        <p class="t">统一等高距与比例，比较坡度。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/terrain-summit-basin.html">
+      <div class="cover"><img src="assets/covers/terrain-summit-basin.webp" alt="山峰与盆地的等高线" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中、高中 · 初中</span>
+        <h3>山峰与盆地的等高线</h3>
+        <p class="t">比较高程与闭合曲线，区分山峰和盆地。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/terrain-ridge.html">
+      <div class="cover"><img src="assets/covers/terrain-ridge.webp" alt="山脊的等高线" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中、高中 · 初中</span>
+        <h3>山脊的等高线</h3>
+        <p class="t">对照立体地形与等高线的弯曲方向。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/terrain-valley.html">
+      <div class="cover"><img src="assets/covers/terrain-valley.webp" alt="山谷的等高线" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中、高中 · 初中</span>
+        <h3>山谷的等高线</h3>
+        <p class="t">比较谷底走向与等高线的弯曲。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/terrain-saddle.html">
+      <div class="cover"><img src="assets/covers/terrain-saddle.webp" alt="鞍部的等高线" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中、高中 · 初中</span>
+        <h3>鞍部的等高线</h3>
+        <p class="t">沿不同方向观察两山峰之间的鞍部。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/terrain-cliff.html">
+      <div class="cover"><img src="assets/covers/terrain-cliff.webp" alt="陡崖的等高线" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中、高中 · 初中</span>
+        <h3>陡崖的等高线</h3>
+        <p class="t">对照侧面高差与俯视等高线。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/terrain-profile.html">
+      <div class="cover"><img src="assets/covers/terrain-profile.webp" alt="地形剖面图" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中、高中 · 初中</span>
+        <h3>地形剖面图</h3>
+        <p class="t">改变剖面线，比较距离和海拔。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/terrain-route.html">
+      <div class="cover"><img src="assets/covers/terrain-route.webp" alt="等高线地形图与路线选择" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中、高中 · 初中</span>
+        <h3>等高线地形图与路线选择</h3>
+        <p class="t">比较路线长度、累计爬升与陡坡段。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/terrain-interpretation.html">
+      <div class="cover"><img src="assets/covers/terrain-interpretation.webp" alt="等高线地形图的判读" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">初中、高中 · 初中</span>
+        <h3>等高线地形图的判读</h3>
+        <p class="t">依据图例、高程和线形判断地形，再核对模型。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+  </div>
+  <h2 class="sec"><i>π</i>数学 <small>5 个课件</small></h2>
+  <div class="grid">
+    <a class="card" href="html/blocks.html">
+      <div class="cover"><img src="assets/covers/blocks.webp" alt="观察物体" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">小学 · 小学</span>
+        <h3>观察物体</h3>
+        <p class="t">多向观察 · 自由搭建 · 按图还原</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/blocks-observe.html">
+      <div class="cover"><img src="assets/covers/blocks-observe.webp" alt="从不同方向观察物体" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">小学 · 小学</span>
+        <h3>从不同方向观察物体</h3>
+        <p class="t">旋转积木模型，比较从不同方向看到的图形。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/blocks-draw.html">
+      <div class="cover"><img src="assets/covers/blocks-draw.webp" alt="画出观察到的图形" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">小学 · 小学</span>
+        <h3>画出观察到的图形</h3>
+        <p class="t">观察积木并在方格中绘图，检查多画与漏画。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/blocks-build.html">
+      <div class="cover"><img src="assets/covers/blocks-build.webp" alt="用小正方体搭建立体图形" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">小学 · 小学</span>
+        <h3>用小正方体搭建立体图形</h3>
+        <p class="t">自由添加、移动和删除积木，再观察各个方向。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+    <a class="card" href="html/blocks-restore.html">
+      <div class="cover"><img src="assets/covers/blocks-restore.webp" alt="根据观察图搭建立体图形" loading="lazy"></div>
+      <div class="body">
+        <span class="chip">小学 · 小学</span>
+        <h3>根据观察图搭建立体图形</h3>
+        <p class="t">依据给出的观察图搭建积木并检查条件。</p>
+        <span class="go">打开课件 →</span>
+      </div>
+    </a>
+  </div>
+</main>
+<footer>内容版权归原作者（小白教育 / xbjiaoyu.com）所有，本离线包仅供教学演示与内网学习使用，请勿用于商业分发。</footer>
+</body>
+</html>

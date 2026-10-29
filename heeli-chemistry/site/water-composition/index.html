@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#063658">
+  <title>水的电解 · 初中化学互动课件</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main id="stage" aria-label="水的电解互动课件">
+    <section class="macro" aria-label="宏观实验">
+      <img class="background" src="./media/asset.c289db973840386a.webp" alt="双支管水电解器、补液管、直流电源与支架" draggable="false">
+      <canvas id="macro-canvas" width="960" height="1080" aria-hidden="true"></canvas>
+      <header class="lesson-title"><div class="eyebrow"><span class="flask">⚗</span> <span id="lesson-track">初中化学</span> <span class="chapter" id="lesson-chapter">水的组成</span></div><h1>水的电解</h1><p>观察气体生成，用数据发现规律</p></header>
+      <button id="readings-toggle" class="readings-toggle" aria-pressed="true" aria-controls="h-volume o-volume" title="仅切换两侧体积数字，保留玻璃管刻度供学生读数">读数显示：开</button>
+      <div class="reservoir-label">补液管<span>硫酸钠水溶液</span></div>
+      <article class="gas-card hydrogen">
+        <div class="gas-name"><span>H₂</span></div><div class="origin">负极收集 <b>−</b></div>
+        <div class="gas-reading"><output id="h-volume">0.0</output><span>mL</span></div>
+        <p class="volume-label">收集气体体积</p>
+        <button id="test-h" class="test-button" disabled>检验氢气 <span>↗</span></button>
+        <span class="test-hint" id="h-hint">通电收集后可检验</span>
+      </article>
+      <article class="gas-card oxygen">
+        <div class="gas-name"><span>O₂</span></div><div class="origin">正极收集 <b>＋</b></div>
+        <div class="gas-reading"><output id="o-volume">0.0</output><span>mL</span></div>
+        <p class="volume-label">收集气体体积</p>
+        <button id="test-o" class="test-button" disabled>检验氧气 <span>↗</span></button>
+        <span class="test-hint" id="o-hint">通电收集后可检验</span>
+      </article>
+      <span class="pole macro-negative">−</span><span class="pole macro-positive">＋</span>
+      <div class="power-display off" aria-label="电源状态"><svg id="power-voltage" class="digital-voltage" viewBox="0 0 120 40" role="img" aria-label="电压 0.0 V"></svg><small id="power-status">电源未接通</small></div>
+      <div class="power-led" id="power-led"></div>
+      <div class="steps"><h2>实验步骤</h2><ol><li id="step-1"><span>1</span>接通直流电源</li><li id="step-2"><span>2</span>观察两极产生气泡</li><li id="step-3"><span>3</span>记录两侧气体体积</li><li id="step-4"><span>4</span>断电后分别检验</li></ol></div>
+      <aside class="macro-note"><span class="note-dot"></span>少量硫酸钠增强水的导电性</aside>
+      <div class="test-caption" id="test-caption" hidden aria-live="polite"><span id="test-caption-tag"></span><strong id="test-caption-title"></strong><p id="test-caption-detail"></p></div>
+      <p class="condition-note">检验模拟预设：气密、排气及氢气验纯已完成。氢气点燃前须验纯。</p>
+    </section>
+    <section class="micro" aria-label="微观解释与数据">
+      <img class="background" src="./media/asset.db5b99403568375e.webp" alt="水中两根惰性电极的微观示意背景" draggable="false">
+      <canvas id="micro-canvas" width="960" height="650" aria-hidden="true"></canvas>
+      <header class="micro-header"><h2>同步微观解析</h2><div class="micro-options"><button id="particles" aria-pressed="true">分子 <span>●</span></button><button id="trails" aria-pressed="true">轨迹 <span>●</span></button></div></header>
+      <div class="electrode-label negative"><b>−</b><span>负极<small>生成氢气</small></span></div>
+      <div class="electrode-label positive"><span>正极<small>生成氧气</small></span><b>＋</b></div>
+      <div class="reaction-label">观察一组分子的变化</div>
+      <div class="molecule-legend"><span><i class="atom oxygen-atom"></i>氧原子</span><span><i class="atom hydrogen-atom"></i>氢原子</span></div>
+      <div class="atom-count"><span>氢原子 <b>4 → 4</b></span><span>氧原子 <b>2 → 2</b></span><em>原子种类和数目不变</em></div>
+      <div class="equation" aria-label="两个水分子通电生成两个氢分子和一个氧分子"><span>2H₂O</span><span class="reaction-arrow"><small>通电</small>＝</span><span>2H₂↑ ＋ O₂↑</span></div>
+      <p class="micro-disclaimer">分子重组与运动为示意，省略离子及电极反应细节</p>
+      <section class="data-panel" aria-label="收集数据与操作">
+        <header><h2>气体体积随时间的变化</h2><span>理想教学示意数据</span></header>
+        <div class="chart-legend"><span class="blue-key">● H₂ 氢气</span><span class="orange-key">● O₂ 氧气</span></div>
+        <svg id="chart" viewBox="0 0 580 255" role="img" aria-label="相同温压下，氢气与氧气的收集体积随通电时间增加，约为二比一"><g id="chart-grid"></g><path id="h-curve" class="curve h-curve"></path><path id="o-curve" class="curve o-curve"></path><line id="chart-cursor" y1="22" y2="207"></line><circle id="h-point" r="6"></circle><circle id="o-point" r="6"></circle><text id="h-chart-label" class="chart-value"></text><text id="o-chart-label" class="chart-value"></text></svg>
+        <aside class="ratio-card"><span>相同温压下 · 收集时</span><h3><b>V(H₂)</b> : <em>V(O₂)</em></h3><div id="ratio">≈ 2 : 1</div><p id="ratio-note">负极氢气，正极氧气<br>先收集，再比较</p><small id="record-note">尚未开始收集</small></aside>
+        <div class="timeline"><label for="time">通电时间 <output id="time-label">0.0</output> <span>/ 100 s</span></label><input id="time" type="range" min="0" max="100" step="0.1" value="0" aria-label="通电时间，拖动后停止通电并回看"><span class="seek-note">拖动回看</span><button id="speed" type="button" aria-label="计时速度 1 倍，点击切换为 2 倍" title="仅加速通电计时和收集数据，动画保持原速">计时 1×</button></div>
+        <div class="controls"><button id="power" class="primary"><span id="power-icon">▶</span><span id="power-label">开始通电</span></button><button id="pause" disabled>Ⅱ 暂停观察</button><button id="replay">↺ 重播</button><span class="stage-status" id="stage-status" aria-live="polite">准备就绪</span><button id="fullscreen" aria-label="全屏显示">⛶ 全屏</button></div>
+      </section>
+    </section>
+  </main>
+  <p class="load-error" id="load-error" hidden>图片未能加载，请检查 assets 文件夹后刷新页面。</p>
+  <button class="load-error" id="browser-notice" hidden aria-label="关闭浏览器提示">当前浏览器不支持全屏</button>
+  <script id="courseware-assets" type="application/json">{"./assets/macro-base.webp":"./media/asset.c289db973840386a.webp","./assets/micro-base.webp":"./media/asset.db5b99403568375e.webp","./assets/splint.webp":"./media/asset.f4292f13b91df23b.webp","./assets/liquid-column-v1.webp":"./media/asset.7ab8bd1efdb5a6e9.webp","./assets/bubble-v1.webp":"./media/asset.60fa28d081e518b2.webp","./assets/molecule-water-v1.webp":"./media/asset.951fb1bc682d39c4.webp","./assets/molecule-hydrogen-v1.webp":"./media/asset.f430fdd02c3f81de.webp","./assets/molecule-oxygen-v1.webp":"./media/asset.12e14dd326b37159.webp","./assets/atom-atlas-v1.webp":"./media/asset.61268efa19f51f27.webp","./assets/splint-flame-v1.webp":"./media/asset.4f07edcdc8732705.webp"}</script><script src="./runtime.js" defer></script>
+
+    <div class="courseware-license-watermark" aria-hidden="true">轻页Lab</div>
+    <style>
+      html, html * { cursor: url("./media/ce397869349bd9d94f85395c1f226b13329b83002cc5c1ae6d148401e2fec41d.png") 17 3, pointer !important; }
+      :fullscreen, :fullscreen * { cursor: url("./media/a4ce93e3cd658c152a8d0d851c5bfb3418b5482c658e2fc1561949c9b8b7c5f6.png") 34 6, url("./media/4e5a1fa37656e11067ed75290f523892c62a480ea879887ae5fbab5017172962.png") 27 5, pointer !important; }
+      :-webkit-full-screen, :-webkit-full-screen * { cursor: url("./media/a4ce93e3cd658c152a8d0d851c5bfb3418b5482c658e2fc1561949c9b8b7c5f6.png") 34 6, url("./media/4e5a1fa37656e11067ed75290f523892c62a480ea879887ae5fbab5017172962.png") 27 5, pointer !important; }
+      :root { scrollbar-color: #8fc4ed #edf7ff; scrollbar-width: thin; }
+      * { scrollbar-color: #8fc4ed #edf7ff; scrollbar-width: thin; }
+      *::-webkit-scrollbar { width: 10px; height: 10px; }
+      *::-webkit-scrollbar-track { background: #edf7ff; }
+      *::-webkit-scrollbar-thumb {
+        min-height: 34px; border: 2px solid #edf7ff; border-radius: 999px;
+        background: #8fc4ed;
+      }
+      *::-webkit-scrollbar-thumb:hover { background: #6eafe0; }
+      *::-webkit-scrollbar-corner { background: #edf7ff; }
+      .courseware-license-watermark {
+        position: fixed; z-index: 100; right: 18px; bottom: 14px;
+        max-width: min(460px, calc(100vw - 36px)); padding: 7px 11px;
+        overflow: hidden; border: 1px solid rgba(116,169,225,.22);
+        border-radius: 999px; color: rgba(20,69,123,.62);
+        background: rgba(241,249,255,.5); backdrop-filter: blur(8px);
+        font: 700 9px/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+        letter-spacing: .05em; pointer-events: none; text-overflow: ellipsis;
+        white-space: nowrap; user-select: none;
+      }
+    </style><script src="./portal-bridge.js" defer></script></body>
+</html>

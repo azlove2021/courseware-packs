@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>初中化学互动课件 · 离线版</title>
+<style>
+:root{--ink:#16232e;--ink2:#4a5c6b;--line:#e2e8ee;--bg:#f5f8fa;--card:#fff;
+--accent:#0f6d8c;--accent2:#e8f4f8;--mint:#eaf6f2;--green:#127a5b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:15px/1.65 "PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif}
+header{background:linear-gradient(135deg,#0b4f66,#12718f 55%,#1a8ba8);color:#fff;padding:44px 28px 38px}
+.wrap{max-width:1120px;margin:0 auto}
+.eyebrow{font-size:12.5px;letter-spacing:.16em;opacity:.85;margin:0 0 10px}
+h1{margin:0 0 10px;font-size:30px;letter-spacing:.02em}
+.sub{margin:0;opacity:.9;font-size:14px}
+.stats{display:flex;gap:26px;margin-top:22px;flex-wrap:wrap}
+.stats div{display:flex;align-items:baseline;gap:7px}
+.stats b{font-size:23px;font-weight:700}
+.stats span{font-size:12.5px;opacity:.82}
+main{max-width:1120px;margin:0 auto;padding:30px 28px 60px}
+.note{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);
+border-radius:10px;padding:14px 18px;margin:0 0 26px;font-size:13.5px;color:var(--ink2)}
+.note b{color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+text-decoration:none;color:inherit;display:flex;flex-direction:column;
+transition:transform .16s ease,box-shadow .16s ease,border-color .16s}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(16,60,80,.13);border-color:#bcd6e0}
+.cover{aspect-ratio:16/10;background:#dfe9ee;overflow:hidden}
+.cover img{width:100%;height:100%;object-fit:cover;display:block}
+.body{padding:14px 16px 17px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tag{display:inline-block;font-size:11px;font-weight:600;padding:4px 9px;border-radius:99px;
+background:var(--accent2);color:var(--accent);align-self:flex-start}
+h3{margin:2px 0 0;font-size:17px;letter-spacing:.01em}
+p.desc{margin:0;font-size:13px;color:var(--ink2);flex:1}
+.open{margin-top:8px;font-size:13px;font-weight:600;color:var(--green);display:flex;
+align-items:center;gap:6px}
+footer{max-width:1120px;margin:0 auto;padding:0 28px 50px;font-size:12.5px;color:#7b8b98}
+@media(max-width:560px){h1{font-size:23px}header{padding:32px 20px 28px}main{padding:22px 20px 44px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">初中化学 · 学科互动网页</p>
+    <h1>初中化学互动课件（离线版）</h1>
+    <p class="sub">双击 index.html 即可打开，不需要联网、不需要登录、不需要安装任何软件</p>
+    <div class="stats">
+      <div><b>6</b><span>个可运行课件</span></div>
+      <div><b>6</b><span>个单元覆盖</span></div>
+      <div><b>0</b><span>外部依赖</span></div>
+    </div>
+  </div>
+</header>
+<main>
+  <p class="note"><b>关于范围：</b>原站初中化学共 44 个课件，其中 6 个为免费课件。
+  本离线包收录的就是这 6 个可完整运行的全部课件；其余 38 个需付费解锁，服务端不下发课件正文，故未收录。</p>
+  <div class="grid">
+      <a class="card" href="site/oxygen-preparation/index.html">
+        <div class="cover"><img src="assets/covers/oxygen-preparation.webp" alt="氧气制取" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">九年级上册 · 第二单元</span>
+          <h3>氧气制取</h3>
+          <p class="desc">高锰酸钾制氧五步装置：检查气密性、装药固定、预热排气、排水集气、收尾检验。</p>
+          <span class="open">打开课件 →</span>
+        </div>
+      </a>
+      <a class="card" href="site/water-composition/index.html">
+        <div class="cover"><img src="assets/covers/water-composition.webp" alt="水的电解" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">九年级上册 · 第四单元</span>
+          <h3>水的电解</h3>
+          <p class="desc">宏观电解与微观电极变化同步演示，可检验氢气与氧气并对比体积比。</p>
+          <span class="open">打开课件 →</span>
+        </div>
+      </a>
+      <a class="card" href="site/filter-water-purifier/index.html">
+        <div class="cover"><img src="assets/covers/filter-water-purifier.webp" alt="自制简易净水器" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">九年级上册 · 第四单元</span>
+          <h3>自制简易净水器</h3>
+          <p class="desc">调整花岗岩、石英砂、活性炭、净水棉四层顺序，观察过滤速度与水质变化。</p>
+          <span class="open">打开课件 →</span>
+        </div>
+      </a>
+      <a class="card" href="site/atom-recombination/index.html">
+        <div class="cover"><img src="assets/covers/atom-recombination.webp" alt="化学反应中原子的重新组合" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">九年级上册 · 第五单元</span>
+          <h3>化学反应中原子的重新组合</h3>
+          <p class="desc">氢气燃烧生成水，观察旧键断开、新键形成与原子种类数目守恒。</p>
+          <span class="open">打开课件 →</span>
+        </div>
+      </a>
+      <a class="card" href="site/sodium-chloride-solution/index.html">
+        <div class="cover"><img src="assets/covers/sodium-chloride-solution.webp" alt="氯化钠溶液配制" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">九年级下册 · 第二单元</span>
+          <h3>氯化钠溶液配制</h3>
+          <p class="desc">六步完成 50 g / 6% 氯化钠溶液的计算、称量、量取、转移、溶解与装瓶。</p>
+          <span class="open">打开课件 →</span>
+        </div>
+      </a>
+      <a class="card" href="site/alpha-scattering/index.html">
+        <div class="cover"><img src="assets/covers/alpha-scattering.webp" alt="α 粒子散射实验" loading="lazy"></div>
+        <div class="body">
+          <span class="tag">实验与拓展 · 科学拓展</span>
+          <h3>α 粒子散射实验</h3>
+          <p class="desc">卢瑟福 α 粒子散射：直穿、偏转、返回三种轨迹与原子核式结构模型。</p>
+          <span class="open">打开课件 →</span>
+        </div>
+      </a>
+  </div>
+</main>
+<footer>
+  内容版权归原作者（轻页Lab / heeli.cc）所有，本离线包仅供教学演示与内网学习使用，请勿用于商业分发。
+</footer>
+</body>
+</html>

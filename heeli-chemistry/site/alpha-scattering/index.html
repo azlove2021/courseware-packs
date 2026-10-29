@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>α 粒子散射实验 · 原子的结构</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="./media/asset.e55459f94df4a554.svg" type="image/svg+xml">
+</head>
+<body>
+<div class="backdrop" aria-hidden="true"></div>
+<main id="stage" class="stage" aria-label="α 粒子散射交互实验">
+  <img id="background" class="background" src="./media/06562d01a89863f87d057bac1824955831bab20f68451e3fefcb1ac516dcfc87.webp" draggable="false" alt="博物馆中的散射实验装置，展台铭牌介绍卢瑟福及其原子核式结构模型">
+  <header class="hero glass-dark">
+    <p class="eyebrow">初中化学 · 原子的结构</p>
+    <h1><i>α</i> 粒子散射实验</h1>
+    <p class="subtitle">看见散射，理解原子核。</p>
+  </header>
+  <div id="foil-layer" class="foil-layer" aria-hidden="true"><img src="./media/de01889a00c0a87a7f43257afb5f700de1e4eb7cebb02f8595f4878f17544fda.webp" alt="" draggable="false"></div>
+  <canvas id="macro-canvas" width="1672" height="941" aria-label="入射粒子经过金箔后直穿、偏转或返回，在荧光屏上留下闪点"></canvas>
+  <div id="annotations">
+    <svg class="annotation-lines" viewBox="0 0 1672 941" aria-hidden="true">
+      <g data-part="source"><path d="M150 342 L172 441"/><circle cx="172" cy="441" r="4"/></g>
+      <g data-part="collimator"><path d="M388 335 L377 423"/><circle cx="377" cy="423" r="4"/></g>
+      <g data-part="foil"><path d="M686 343 L683 407"/><circle cx="683" cy="407" r="4"/></g>
+      <g data-part="screen"><path d="M977 326 L963 344"/><circle cx="963" cy="344" r="4"/></g>
+    </svg>
+    <div class="apparatus-labels" aria-label="实验装置标注">
+      <button class="part-label glass-dark" data-part="source" aria-expanded="false" aria-controls="apparatus-info">α 粒子源</button>
+      <button class="part-label glass-dark" data-part="collimator" aria-expanded="false" aria-controls="apparatus-info">准直器</button>
+      <button class="part-label glass-dark" data-part="foil" aria-expanded="false" aria-controls="apparatus-info">金箔</button>
+      <button class="part-label glass-dark" data-part="screen" aria-expanded="false" aria-controls="apparatus-info">荧光屏</button>
+    </div>
+    <section id="apparatus-info" class="apparatus-info glass-dark" aria-live="polite" hidden>
+      <button id="close-info" class="close-info" aria-label="关闭装置说明">×</button>
+      <h2 id="part-title"></h2><p id="part-description"></p>
+    </section>
+  </div>
+  <div id="focus-tag" class="focus-tag">当前：<span id="macro-kind">偏转</span></div>
+  <aside class="micro-panel glass" aria-labelledby="micro-heading">
+    <img class="micro-panel-art" src="./media/29565d7823e4d0d101c73e2d5c19029aa01f22d2bd2e598f3909818d7fb908bb.webp" alt="" aria-hidden="true" draggable="false">
+    <div class="panel-heading"><h2 id="micro-heading">微观解释</h2><span class="status-badge"><img class="badge-art" src="./media/fdf8c873922ca560f865f3c8241eb2b889ed67afd056a23eeca5b88240a51db2.webp" alt="" aria-hidden="true"><img src="./media/6c5c9d8b2150ca0484f3c46b50d22faaaa6209800da053b2c9f2026ecc7d96a2.webp" alt="" aria-hidden="true"><span>当前散射：<strong id="current-kind">偏转</strong></span></span></div>
+    <p class="panel-subtitle">同步追踪左侧高亮粒子 <span id="play-state">正在播放</span></p>
+    <div id="micro-view" class="micro-view" role="img" aria-label="原子核排斥α粒子的微观动态示意">
+      <canvas id="micro-canvas" aria-hidden="true"></canvas>
+      <img id="alpha-art" src="./media/6c5c9d8b2150ca0484f3c46b50d22faaaa6209800da053b2c9f2026ecc7d96a2.webp" hidden alt="">
+      <img id="nucleus-art" src="./media/58e2b1b2363636e53ed74c2f0f6beebc8493cc0c24d9fdb35d8a5b75a737d68e.webp" hidden alt="">
+      <p id="webgl-warning" hidden>当前浏览器无法绘制演示，请使用支持 Canvas 的浏览器。</p>
+      <div class="diagram-caption"><span>局部放大 · 非等比例</span><span>偏转角 <b id="angle-value">43°</b></span></div>
+    </div>
+    <div class="phenomenon-tabs" role="group" aria-label="选择典型现象">
+      <button data-preset="straight" aria-pressed="false"><span class="preset-visual"><img class="preset-particle" src="./media/6c5c9d8b2150ca0484f3c46b50d22faaaa6209800da053b2c9f2026ecc7d96a2.webp" alt="" aria-hidden="true"><svg viewBox="0 0 80 26" aria-hidden="true"><circle cx="9" cy="13" r="5"/><path d="M17 13H72m-8-5 8 5-8 5"/></svg></span><span>直穿</span></button>
+      <button data-preset="deflect" aria-pressed="true"><span class="preset-visual"><img class="preset-particle" src="./media/6c5c9d8b2150ca0484f3c46b50d22faaaa6209800da053b2c9f2026ecc7d96a2.webp" alt="" aria-hidden="true"><svg viewBox="0 0 80 26" aria-hidden="true"><circle cx="9" cy="21" r="5"/><path d="M17 21Q42 22 70 4m-9 0h9v9"/></svg></span><span>偏转</span></button>
+      <button data-preset="return" aria-pressed="false"><span class="preset-visual"><img class="preset-particle" src="./media/6c5c9d8b2150ca0484f3c46b50d22faaaa6209800da053b2c9f2026ecc7d96a2.webp" alt="" aria-hidden="true"><svg viewBox="0 0 80 26" aria-hidden="true"><circle cx="9" cy="21" r="5"/><path d="M17 21H58C79 21 79 5 58 5H42m7-4-7 4 7 4"/></svg></span><span>返回</span></button>
+    </div>
+    <div class="impact-control">
+      <div class="slider-heading"><label for="impact">调节高亮粒子的入射位置</label><output id="impact-output" for="impact">靠近原子核 · 上侧</output></div>
+      <div class="range-wrap"><input id="impact" type="range" min="-100" max="100" value="18" step="1" aria-label="调节高亮粒子的入射位置"><i aria-hidden="true"></i><img id="impact-thumb" src="./media/a089a8ede39e3930b19800906114a5959f03403c3e167e0a5c8d4b11ddd94666.webp" alt="" aria-hidden="true"></div>
+      <div class="range-labels"><span>下侧远离</span><span>正对原子核</span><span>上侧远离</span></div>
+    </div>
+    <section class="explanation" aria-live="polite"><p id="core-explanation">靠近原子核，偏转更明显。</p><p id="force-explanation">α 粒子与原子核都带正电，相互排斥。</p></section>
+    <p class="micro-note">原子核保持固定；核子数量与尺度均为示意。</p>
+  </aside>
+  <nav class="experiment-controls glass" aria-label="实验控制">
+    <div class="control-row">
+      <div class="mode-tabs" role="group" aria-label="演示模式"><button data-mode="continuous" aria-pressed="true">连续观察</button><button data-mode="single" aria-pressed="false">单粒子追踪</button></div>
+      <span class="divider" aria-hidden="true"></span>
+      <button id="play" class="primary" aria-label="暂停实验"><span id="play-symbol" aria-hidden="true">Ⅱ</span><span id="play-label">暂停实验</span></button>
+      <button id="reset"><span aria-hidden="true">↻</span> 重置</button>
+      <span class="divider" aria-hidden="true"></span>
+      <button id="toggle-labels" role="switch" aria-checked="true">装置标注 <span class="switch-track" aria-hidden="true"></span></button>
+      <button id="fullscreen" class="icon-button" aria-label="进入全屏" title="全屏">⛶</button>
+    </div>
+    <p id="control-note" class="control-note">大多数直穿 · 少数偏转 · 极少数返回 <span>｜ 轨迹与出现频率为教学示意</span></p>
+  </nav>
+  <div id="load-error" class="load-error" role="alert" hidden>素材加载失败，请刷新页面或检查本地资源。</div>
+</main>
+<noscript>此课件需要启用 JavaScript。</noscript>
+<script id="courseware-assets" type="application/json">{"./assets/favicon.svg":"./media/asset.e55459f94df4a554.svg"}</script><script src="./runtime.js" defer></script>
+
+    <div class="courseware-license-watermark" aria-hidden="true">轻页Lab</div>
+    <style>
+      html, html * { cursor: url("./media/ce397869349bd9d94f85395c1f226b13329b83002cc5c1ae6d148401e2fec41d.png") 17 3, pointer !important; }
+      :fullscreen, :fullscreen * { cursor: url("./media/a4ce93e3cd658c152a8d0d851c5bfb3418b5482c658e2fc1561949c9b8b7c5f6.png") 34 6, url("./media/4e5a1fa37656e11067ed75290f523892c62a480ea879887ae5fbab5017172962.png") 27 5, pointer !important; }
+      :-webkit-full-screen, :-webkit-full-screen * { cursor: url("./media/a4ce93e3cd658c152a8d0d851c5bfb3418b5482c658e2fc1561949c9b8b7c5f6.png") 34 6, url("./media/4e5a1fa37656e11067ed75290f523892c62a480ea879887ae5fbab5017172962.png") 27 5, pointer !important; }
+      :root { scrollbar-color: #8fc4ed #edf7ff; scrollbar-width: thin; }
+      * { scrollbar-color: #8fc4ed #edf7ff; scrollbar-width: thin; }
+      *::-webkit-scrollbar { width: 10px; height: 10px; }
+      *::-webkit-scrollbar-track { background: #edf7ff; }
+      *::-webkit-scrollbar-thumb {
+        min-height: 34px; border: 2px solid #edf7ff; border-radius: 999px;
+        background: #8fc4ed;
+      }
+      *::-webkit-scrollbar-thumb:hover { background: #6eafe0; }
+      *::-webkit-scrollbar-corner { background: #edf7ff; }
+      .courseware-license-watermark {
+        position: fixed; z-index: 100; right: 18px; bottom: 14px;
+        max-width: min(460px, calc(100vw - 36px)); padding: 7px 11px;
+        overflow: hidden; border: 1px solid rgba(116,169,225,.22);
+        border-radius: 999px; color: rgba(20,69,123,.62);
+        background: rgba(241,249,255,.5); backdrop-filter: blur(8px);
+        font: 700 9px/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+        letter-spacing: .05em; pointer-events: none; text-overflow: ellipsis;
+        white-space: nowrap; user-select: none;
+      }
+    </style><script src="./portal-bridge.js" defer></script></body>
+</html>

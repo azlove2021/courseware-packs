@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#edf3fa">
+    <meta name="description" content="通过氢气燃烧生成水，观察化学反应中原子的重新组合。">
+    <title>化学反应中原子的重新组合 · 3D 探究课</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body data-course-id="atom-recombination">
+<main class="lab stage-during" id="lab">
+      <div class="macro-backdrop" aria-hidden="true"></div>
+      <canvas id="scene" aria-hidden="true"></canvas>
+      <div class="divider" aria-hidden="true"></div>
+      <div class="view-label macro-label">宏观现象</div>
+      <div class="view-label micro-label">微观过程</div>
+      <div class="species-guide" aria-hidden="true">
+        <span class="species-h"><i></i>H₂ · 氢气</span>
+        <span class="species-o"><i></i>O₂ · 氧气</span>
+      </div>
+
+      <header class="hero">
+        <h1>化学反应中原子的重新组合</h1>
+        <p>原子不会消失或产生，只是重新组合成新的分子。</p>
+      </header>
+
+      <div class="apparatus-note">
+        <i aria-hidden="true"></i>
+        <span>氢气燃烧，干冷烧杯内壁出现水珠</span>
+      </div>
+      <div class="gas-callout hydrogen-callout">H₂ 氢气入口</div>
+      <div class="gas-callout oxygen-callout">O₂ 氧气入口</div>
+
+      <section class="panel knowledge-card" aria-live="polite">
+        <div class="molecule-icon" aria-hidden="true">
+          <span class="icon-o"></span>
+          <span class="icon-h1"></span>
+          <span class="icon-h2"></span>
+        </div>
+        <div>
+          <span class="card-stage" id="cardStage">反应中</span>
+          <h2 id="cardTitle">原子重新组合</h2>
+          <p id="cardBody">有效碰撞使旧键断开，原子重新组合并形成新的化学键。</p>
+        </div>
+      </section>
+
+      <section class="panel controls" aria-label="反应进度控制">
+        <div class="control-header">
+          <strong class="percent" id="percent">50%</strong>
+          <div class="equation" aria-label="化学反应方程式：氢气和氧气在点燃条件下生成水">
+            <span class="reactants">2H₂ + O₂</span>
+            <span class="arrow"><small>点燃</small>＝</span>
+            <span class="products">2H₂O</span>
+          </div>
+          <span class="state-badge" id="stateBadge">反应中</span>
+        </div>
+
+        <input class="reaction-slider" id="progress" type="range" min="0" max="100" value="50" aria-label="反应进度">
+        <div class="stage-labels">
+          <button type="button" data-progress="0">反应前</button>
+          <button type="button" data-progress="50" class="active">反应中</button>
+          <button type="button" data-progress="100">反应后</button>
+        </div>
+
+        <div class="invariants">
+          <span><i class="atom-dot atom-h"></i>氢原子总数不变</span>
+          <span><i class="atom-dot atom-o"></i>氧原子总数不变</span>
+          <em>方程式表示粒子数目比，微观区展示大量粒子的反应过程。</em>
+        </div>
+      </section>
+    </main>
+<button class="micro-fullscreen-control" type="button" id="microscopicFullscreenButton" aria-label="进入全屏" title="进入全屏" aria-pressed="false"><svg class="fullscreen-icon-enter" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"/></svg><svg class="fullscreen-icon-exit" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 8h5V3M21 8h-5V3M3 16h5v5M21 16h-5v5"/></svg><span>全屏</span></button>
+
+    <div class="courseware-license-watermark" aria-hidden="true">轻页Lab</div>
+    <style>
+      html, html * { cursor: url("./media/ce397869349bd9d94f85395c1f226b13329b83002cc5c1ae6d148401e2fec41d.png") 17 3, pointer !important; }
+      :fullscreen, :fullscreen * { cursor: url("./media/a4ce93e3cd658c152a8d0d851c5bfb3418b5482c658e2fc1561949c9b8b7c5f6.png") 34 6, url("./media/4e5a1fa37656e11067ed75290f523892c62a480ea879887ae5fbab5017172962.png") 27 5, pointer !important; }
+      :-webkit-full-screen, :-webkit-full-screen * { cursor: url("./media/a4ce93e3cd658c152a8d0d851c5bfb3418b5482c658e2fc1561949c9b8b7c5f6.png") 34 6, url("./media/4e5a1fa37656e11067ed75290f523892c62a480ea879887ae5fbab5017172962.png") 27 5, pointer !important; }
+      :root { scrollbar-color: #8fc4ed #edf7ff; scrollbar-width: thin; }
+      * { scrollbar-color: #8fc4ed #edf7ff; scrollbar-width: thin; }
+      *::-webkit-scrollbar { width: 10px; height: 10px; }
+      *::-webkit-scrollbar-track { background: #edf7ff; }
+      *::-webkit-scrollbar-thumb {
+        min-height: 34px; border: 2px solid #edf7ff; border-radius: 999px;
+        background: #8fc4ed;
+      }
+      *::-webkit-scrollbar-thumb:hover { background: #6eafe0; }
+      *::-webkit-scrollbar-corner { background: #edf7ff; }
+      .courseware-license-watermark {
+        position: fixed; z-index: 100; right: 18px; bottom: 14px;
+        max-width: min(460px, calc(100vw - 36px)); padding: 7px 11px;
+        overflow: hidden; border: 1px solid rgba(116,169,225,.22);
+        border-radius: 999px; color: rgba(20,69,123,.62);
+        background: rgba(241,249,255,.5); backdrop-filter: blur(8px);
+        font: 700 9px/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+        letter-spacing: .05em; pointer-events: none; text-overflow: ellipsis;
+        white-space: nowrap; user-select: none;
+      }
+    </style>
+<script src="./runtime.js" defer></script>
+<script src="./portal-bridge.js" defer></script></body>
+</html>

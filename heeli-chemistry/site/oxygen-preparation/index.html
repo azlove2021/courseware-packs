@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#063675"><title>高锰酸钾制取氧气 · 互动实验</title><link rel="stylesheet" href="./styles.css"></head>
+<body>
+<main class="stage" id="stage" aria-label="高锰酸钾制取氧气互动课件">
+  <img class="background" src="./media/asset.04d46e726310fb2f.webp" alt="明亮实验室与蓝色微观观察区">
+  <canvas id="scene" width="1920" height="1080" aria-label="高锰酸钾加热、排水集气及氧气检验的连续实验装置"></canvas>
+  <header><p class="eyebrow">初中化学 / 实验探究</p><h1>高锰酸钾<br>制取氧气</h1><p class="subtitle">加热分解 · 排水集气</p></header>
+  <div class="scene-label solid-label" id="solid-label">空试管 · 尚未装药</div>
+  <div class="scene-label cotton-label" id="cotton-label">先检查气密性</div>
+  <div class="scene-label jar-label" id="jar-label">集气瓶装满水 · 暂不收集</div>
+  <section class="phase-card"><span id="phase-number">01</span><div><h2 id="phase-title">检查气密性</h2><p id="phase-copy">导管口浸入水中，再用手握住空试管。</p></div></section>
+  <nav class="steps" aria-label="实验步骤">
+    <button data-step="0"><canvas width="360" height="170"></canvas><span class="step-index">1</span><b>检查气密性</b><small>先检查，再装药</small></button>
+    <button data-step="1"><canvas width="360" height="170"></canvas><span class="step-index">2</span><b>装药与固定</b><small>平铺药品，放棉花</small></button>
+    <button data-step="2"><canvas width="360" height="170"></canvas><span class="step-index">3</span><b>预热与排气</b><small>均匀预热，先排空气</small></button>
+    <button data-step="3"><canvas width="360" height="170"></canvas><span class="step-index">4</span><b>排水集气</b><small>水面下降，氧气增加</small></button>
+    <button data-step="4"><canvas width="360" height="170"></canvas><span class="step-index">5</span><b>收尾与检验</b><small>先离后熄，木条复燃</small></button>
+  </nav>
+  <section class="right-heading"><p class="eyebrow">OBSERVE · UNDERSTAND · REMEMBER</p><h2 id="right-title">先确认：装置不漏气</h2><p id="right-subtitle">手握升温 → 冒泡；松手冷却 → 水柱</p></section>
+  <section class="knowledge" id="knowledge"><p class="section-kicker">实验知识</p><h3 id="knowledge-title">先检查气密性，再加入药品</h3><table><thead><tr><th>操作</th><th>观察现象与依据</th></tr></thead><tbody id="knowledge-rows"></tbody></table><div class="takeaway" id="takeaway"></div></section>
+  <section class="micro-notes" id="micro-notes" hidden><span>固体代表单元 · 净变化示意</span><p>固体产物留在试管内，O₂ 逸出</p><div class="legend"><span><i class="k"></i>K</span><span><i class="mn"></i>Mn</span><span><i class="o"></i>O</span><small>颜色仅用于区分元素</small></div><p class="micro-disclaimer">不表示真实晶体结构或具体反应机理</p></section>
+  <section class="controls">
+    <div class="formula-caption">化学方程式</div>
+    <div class="equation" aria-label="2 KMnO4 加热生成 K2MnO4、MnO2 和氧气"><span>2KMnO<sub>4</sub></span><span class="reaction-arrow"><small>加热</small>＝</span><span>K<sub>2</sub>MnO<sub>4</sub> + MnO<sub>2</sub> + O<sub>2</sub>↑</span></div>
+    <p class="safety-note" id="safety-note"><span>!</span>先移导管，再熄灭酒精灯</p>
+    <div class="progress-caption"><span id="play-status" role="status">准备观察</span><label class="playback-speed" for="playback-rate">倍速<select id="playback-rate" aria-label="播放倍速" disabled><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option><option value="3">3×</option></select></label><output id="percent">0%</output></div>
+    <label class="sr-only" for="progress">演示进度</label><input type="range" id="progress" min="0" max="146" step="0.05" value="0">
+    <div class="milestones"><span>检查</span><span>装药</span><span>加热</span><span>集气</span><span>检验</span></div>
+    <div class="actions"><button id="play" class="primary" disabled>▶ 开始演示</button><button id="next" disabled>下一步</button><button id="reset" disabled>↺ 重播</button><button id="flows" aria-pressed="false" disabled>气路</button><button id="fullscreen" aria-label="全屏">⛶</button></div>
+    <div class="control-footer"><button id="details-open">实验要点 ↗</button><span>粒子与进度为教学示意</span></div>
+  </section>
+  <div id="loading" role="status">正在准备实验装置…</div>
+</main>
+<dialog id="details"><button id="details-close" aria-label="关闭">×</button><p class="eyebrow">实验要点</p><h2>查 · 装 · 定 · 点 · 收 · 离 · 熄</h2><ol><li>先检查空装置的气密性：导管口浸水，手握升温观察气泡，松手冷却后观察水柱。没有明显现象时应检查温差、浸水情况和连接，不能据此定位漏点。</li><li>高锰酸钾为紫黑色固体，平铺试管底部；管口放疏松棉花，防止粉末进入导管。导管略伸出胶塞。</li><li>试管口略向下，防止冷凝水倒流到受热处。先均匀预热，再用外焰集中加热药品。</li><li>早期气泡含装置内空气；连续均匀冒泡后再收集。氧气不易溶于水，可用排水法收集。</li><li>排水法集满：瓶内水排尽，较大气泡从瓶口逸出。检验氧气：带火星木条伸入瓶内后复燃；这与向上排空气法在瓶口验满不同。</li><li>先移导管出水，再用灯帽盖灭酒精灯，防止水倒吸进入热试管。集气瓶水下盖片、正放；试管自然冷却后再整理。</li></ol><p>MnO₂ 在本反应中是生成物。微观代表单元只比较净变化；演示时间、颗粒大小、气泡与液位变化不代表实际速率、转化率或氧气纯度。</p></dialog>
+<script id="courseware-assets" type="application/json">{"./assets/lab-background.webp":"./media/asset.04d46e726310fb2f.webp","./assets/empty-test-tube.webp":"./media/asset.a553077fca836238.webp","./assets/instruments.webp":"./media/asset.cea032cbf22b122a.webp","./assets/hand-grip-cartoon.webp":"./media/asset.1185112fd859830b.webp","./assets/outlet-bubble.webp":"./media/asset.8a6f447e3b0bf43b.webp","./assets/collecting-jar.webp":"./media/asset.35475a7cac474ef6.webp","./assets/water-trough.webp":"./media/asset.441ecad6f2e9f1cd.webp"}</script><script src="./runtime.js" defer></script>
+
+    <div class="courseware-license-watermark" aria-hidden="true">轻页Lab</div>
+    <style>
+      html, html * { cursor: url("./media/ce397869349bd9d94f85395c1f226b13329b83002cc5c1ae6d148401e2fec41d.png") 17 3, pointer !important; }
+      :fullscreen, :fullscreen * { cursor: url("./media/a4ce93e3cd658c152a8d0d851c5bfb3418b5482c658e2fc1561949c9b8b7c5f6.png") 34 6, url("./media/4e5a1fa37656e11067ed75290f523892c62a480ea879887ae5fbab5017172962.png") 27 5, pointer !important; }
+      :-webkit-full-screen, :-webkit-full-screen * { cursor: url("./media/a4ce93e3cd658c152a8d0d851c5bfb3418b5482c658e2fc1561949c9b8b7c5f6.png") 34 6, url("./media/4e5a1fa37656e11067ed75290f523892c62a480ea879887ae5fbab5017172962.png") 27 5, pointer !important; }
+      :root { scrollbar-color: #8fc4ed #edf7ff; scrollbar-width: thin; }
+      * { scrollbar-color: #8fc4ed #edf7ff; scrollbar-width: thin; }
+      *::-webkit-scrollbar { width: 10px; height: 10px; }
+      *::-webkit-scrollbar-track { background: #edf7ff; }
+      *::-webkit-scrollbar-thumb {
+        min-height: 34px; border: 2px solid #edf7ff; border-radius: 999px;
+        background: #8fc4ed;
+      }
+      *::-webkit-scrollbar-thumb:hover { background: #6eafe0; }
+      *::-webkit-scrollbar-corner { background: #edf7ff; }
+      .courseware-license-watermark {
+        position: fixed; z-index: 100; right: 18px; bottom: 14px;
+        max-width: min(460px, calc(100vw - 36px)); padding: 7px 11px;
+        overflow: hidden; border: 1px solid rgba(116,169,225,.22);
+        border-radius: 999px; color: rgba(20,69,123,.62);
+        background: rgba(241,249,255,.5); backdrop-filter: blur(8px);
+        font: 700 9px/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+        letter-spacing: .05em; pointer-events: none; text-overflow: ellipsis;
+        white-space: nowrap; user-select: none;
+      }
+    </style><script src="./portal-bridge.js" defer></script></body></html>

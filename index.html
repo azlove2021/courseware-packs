@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>互动课件离线合集</title>
+<style>
+:root{--ink:#182430;--ink2:#53626f;--line:#e3e9ef;--bg:#f4f7f9;--card:#fff;--accent:#0f6d8c;--accent2:#e7f3f7;--green:#12795c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif}
+header{background:linear-gradient(135deg,#123a4e,#166b83 58%,#1c8ba3);color:#fff;padding:46px 28px 40px}
+.wrap{max-width:1080px;margin:0 auto}
+.eyebrow{font-size:12.5px;letter-spacing:.16em;opacity:.85;margin:0 0 10px}
+h1{margin:0 0 10px;font-size:31px;letter-spacing:.02em}
+.sub{margin:0;opacity:.9;font-size:14px}
+main{max-width:1080px;margin:0 auto;padding:32px 28px 60px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:22px}
+.pack{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+display:flex;flex-direction:column;text-decoration:none;color:inherit;
+transition:transform .16s ease,box-shadow .16s ease,border-color .16s}
+.pack:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(16,60,80,.14);border-color:#bdd8e0}
+.hero{aspect-ratio:16/9;overflow:hidden;background:#dde9ee}
+.hero img{width:100%;height:100%;object-fit:cover;display:block}
+.pbody{padding:18px 20px 22px;display:flex;flex-direction:column;gap:9px;flex:1}
+.tagline{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--accent);
+background:var(--accent2);padding:4px 10px;border-radius:99px;align-self:flex-start}
+h2{margin:0;font-size:19px}
+p.desc{margin:0;font-size:13.5px;color:var(--ink2);flex:1}
+ul.pts{margin:2px 0 0;padding:0;list-style:none;font-size:13px;color:var(--ink2)}
+ul.pts li{padding-left:16px;position:relative;margin-bottom:3px}
+ul.pts li::before{content:"";position:absolute;left:2px;top:8px;width:5px;height:5px;border-radius:50%;background:#8fc3d2}
+.go{margin-top:10px;font-size:13.5px;font-weight:700;color:var(--green)}
+.note{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);
+border-radius:10px;padding:14px 18px;margin:0 0 26px;font-size:13.5px;color:var(--ink2)}
+.note b{color:var(--ink)}
+footer{max-width:1080px;margin:0 auto;padding:0 28px 50px;font-size:12.5px;color:#7d8b97}
+footer code{background:#eaeff3;padding:1px 5px;border-radius:4px;font-size:12px}
+@media(max-width:560px){h1{font-size:23px}header{padding:32px 20px 28px}main{padding:22px 20px 44px}
+.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">离线课件合集</p>
+    <h1>互动课件离线合集</h1>
+    <p class="sub">两套可直接运行的互动课件，全部单文件或零依赖，断网可用</p>
+  </div>
+</header>
+<main>
+  <p class="note"><b>怎么用：</b>点下面任意一套进入它的总目录。每个课件都能单独打开，也可以只拷某一个文件带走。</p>
+  <div class="cards">
+    <a class="pack" href="heeli-chemistry/index.html">
+      <div class="hero"><img src="heeli-chemistry/assets/covers/water-composition.webp" alt="初中化学互动课件"></div>
+      <div class="pbody">
+        <span class="tagline">初中化学 · 6 个课件</span>
+        <h2>初中化学互动课件</h2>
+        <p class="desc">3D 实验装置动画，可播放、暂停、拖进度、切换实验阶段，含实时读数。</p>
+        <ul class="pts">
+          <li>氧气制取、水的电解、自制净水器</li>
+          <li>原子重组、氯化钠溶液配制、α 粒子散射</li>
+          <li>27.7 MB · 含全部贴图与视频素材</li>
+        </ul>
+        <span class="go">进入课件库 →</span>
+      </div>
+    </a>
+    <a class="pack" href="xb-edu/index.html">
+      <div class="hero"><img src="xb-edu/assets/covers/mirror.webp" alt="小白教育互动课件"></div>
+      <div class="pbody">
+        <span class="tagline">物理 / 化学 / 地理 / 数学 · 53 个课件</span>
+        <h2>小白教育互动课件</h2>
+        <p class="desc">每个课件是一个独立 HTML，参数可调、现象实时响应，适合课堂演示与自主探究。</p>
+        <ul class="pts">
+          <li>物理 24 · 化学 12 · 地理 12 · 数学 5</li>
+          <li>平面镜成像、透镜成像、等高线、氧气制取…</li>
+          <li>52.6 MB · 单文件自包含，可单独分发</li>
+        </ul>
+        <span class="go">进入课件库 →</span>
+      </div>
+    </a>
+  </div>
+</main>
+<footer>
+  课件内容版权归原作者所有（轻页Lab / 小白教育），本项目仅做离线化整理，仅供教学演示与内网学习使用。<br>
+  想整包下载：仓库页右上角 <code>Code → Download ZIP</code>。
+</footer>
+</body>
+</html>

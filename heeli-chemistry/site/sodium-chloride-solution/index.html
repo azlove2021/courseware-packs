@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="配制 50 g、6% 氯化钠溶液的三维互动课件。">
+  <title>氯化钠溶液配制 · 三维实验台</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app" aria-label="一定溶质质量分数的氯化钠溶液配制三维实验台" aria-busy="true" data-skin="forest" data-panorama="./media/73ac69c12ae9a24765fa4c4c8e576de82e39a593256c6229a38739ee45e4c100.webp">
+    <div class="scene" id="scene"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <header class="topbar">
+      <section class="title-block glass-panel">
+        <div class="eyebrow">初中化学 <i>›</i> 溶液配制</div>
+        <h1>氯化钠溶液配制</h1>
+        <p class="subtitle">配制 50 g、溶质质量分数为 6% 的氯化钠溶液</p>
+        <div class="badges"><span>NaCl 3.0 g</span><span>蒸馏水 47 mL</span><span>成品 50 g · 6%</span></div>
+      </section>
+    </header>
+    <aside class="experiment-overview-panel glass-panel" aria-label="实时配制状态">
+      <div class="panel-header">
+        <div><p class="panel-kicker">实验数据</p><h2>配制用量</h2></div>
+        <button class="panel-toggle icon-labeled-control" type="button" data-panel-toggle="overviewContent" aria-controls="overviewContent" aria-expanded="true" aria-label="收起面板" title="收起面板"><svg class="panel-toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6.5 14.5 5.5-5 5.5 5"/></svg><span>收起</span></button>
+      </div>
+      <div class="panel-content" id="overviewContent">
+        <div class="telemetry" aria-live="polite">
+          <div class="telemetry-heading"><p class="panel-kicker">目标与当前读数</p><span>实时</span></div>
+          <div class="metric"><span>当前步骤</span><strong id="metricStep">计算</strong></div>
+          <div class="metric"><span>氯化钠</span><strong id="metricSalt">3.0 g</strong></div>
+          <div class="metric"><span>蒸馏水</span><strong id="metricWater">47 mL</strong></div>
+          <div class="metric"><span>成品容器</span><strong>细口试剂瓶</strong></div>
+          <div class="operation-note" id="operationNote">先根据溶质质量分数公式完成计算。</div>
+        </div>
+        <section class="overview-checks" aria-label="配制规范">
+          <h3>配制规范</h3>
+          <ul><li>计算用量准确</li><li>量筒读数视线水平</li><li>玻璃棒轻搅至完全溶解</li></ul>
+        </section>
+      </div>
+    </aside>
+    <section class="knowledge-panel glass-panel" id="knowledgePanel" aria-live="polite" aria-label="操作依据与实验观察">
+      <div class="panel-header">
+        <div><p class="panel-kicker">实验分析</p><h2>操作与观察</h2></div>
+        <button class="panel-toggle icon-labeled-control" type="button" data-panel-toggle="knowledgeContentWrap" aria-controls="knowledgeContentWrap" aria-expanded="true" aria-label="收起面板" title="收起面板"><svg class="panel-toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6.5 14.5 5.5-5 5.5 5"/></svg><span>收起</span></button>
+      </div>
+      <div class="panel-content" id="knowledgeContentWrap">
+        <div class="observation-status"><span></span><strong id="knowledgeKicker">计算依据</strong></div>
+        <div id="knowledgeContent"></div>
+        <section class="safety-note"><h3>规范提示</h3><p>量筒只用于量取液体，不在量筒内配制溶液；成品装入细口试剂瓶并贴签。</p></section>
+      </div>
+    </section>
+    <section class="error-panel glass-panel" id="errorPanel" aria-label="实验误差分析">
+      <div class="error-heading"><div><p class="panel-kicker">完成后复盘</p><h2>误差分析</h2></div><span class="complete-mark">完成</span></div>
+      <div id="errorList"></div>
+    </section>
+    <div class="scene-caption glass-panel" id="sceneCaption">
+      <span class="caption-index">01</span>
+      <div><strong id="captionTitle">先计算，再操作</strong><span id="captionCopy">m(NaCl)=50 g×6%=3.0 g；V(水)≈47 mL</span></div>
+    </div>
+    <nav class="controls glass-panel" aria-label="实验步骤与控制">
+      <div class="control-heading"><span><i></i>实验步骤导航</span><small>自动按顺序播放，也可从任一步骤开始</small></div>
+      <div class="steps" id="steps"></div>
+      <div class="actions">
+        <button class="action primary" type="button" id="playButton">自动播放</button>
+        <button class="action" type="button" id="rotateButton" aria-label="开启缓慢环视" aria-pressed="false">缓慢环视</button>
+        <button class="action" type="button" id="resetButton">重制</button>
+        <button class="action icon-labeled-control fullscreen-action" type="button" id="fullscreenButton" aria-label="进入全屏" title="进入全屏" aria-pressed="false"><svg class="fullscreen-icon fullscreen-icon-enter" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"/></svg><svg class="fullscreen-icon fullscreen-icon-exit" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 8h5V3M21 8h-5V3M3 16h5v5M21 16h-5v5"/></svg><span>全屏</span></button>
+      </div>
+    </nav>
+    <div class="loading" id="loading" role="status" aria-live="polite">
+      <div class="loader-card glass-panel"><div class="loader-orbit"></div><strong>正在装配溶液配制实验台</strong><span>构建天平、量筒、烧杯与玻璃材质</span></div>
+    </div>
+    <section class="fallback" id="fallback" role="alert">
+      <div class="loader-card fallback-card glass-panel">
+        <h2>当前环境无法启动三维实验台</h2>
+        <p>请使用支持 WebGL 2 的现代浏览器。标准流程为：</p>
+        <ol><li>计算</li><li>称量 3.0 g 氯化钠</li><li>量取约 47 mL 水</li><li>依次转入烧杯</li><li>搅拌溶解</li><li>装瓶贴签</li></ol>
+      </div>
+    </section>
+  </main>
+  
+    <div class="courseware-license-watermark" aria-hidden="true">轻页Lab</div>
+    <style>
+      html, html * { cursor: url("./media/ce397869349bd9d94f85395c1f226b13329b83002cc5c1ae6d148401e2fec41d.png") 17 3, pointer !important; }
+      :fullscreen, :fullscreen * { cursor: url("./media/a4ce93e3cd658c152a8d0d851c5bfb3418b5482c658e2fc1561949c9b8b7c5f6.png") 34 6, url("./media/4e5a1fa37656e11067ed75290f523892c62a480ea879887ae5fbab5017172962.png") 27 5, pointer !important; }
+      :-webkit-full-screen, :-webkit-full-screen * { cursor: url("./media/a4ce93e3cd658c152a8d0d851c5bfb3418b5482c658e2fc1561949c9b8b7c5f6.png") 34 6, url("./media/4e5a1fa37656e11067ed75290f523892c62a480ea879887ae5fbab5017172962.png") 27 5, pointer !important; }
+      :root { scrollbar-color: #8fc4ed #edf7ff; scrollbar-width: thin; }
+      * { scrollbar-color: #8fc4ed #edf7ff; scrollbar-width: thin; }
+      *::-webkit-scrollbar { width: 10px; height: 10px; }
+      *::-webkit-scrollbar-track { background: #edf7ff; }
+      *::-webkit-scrollbar-thumb {
+        min-height: 34px; border: 2px solid #edf7ff; border-radius: 999px;
+        background: #8fc4ed;
+      }
+      *::-webkit-scrollbar-thumb:hover { background: #6eafe0; }
+      *::-webkit-scrollbar-corner { background: #edf7ff; }
+      .courseware-license-watermark {
+        position: fixed; z-index: 100; right: 18px; bottom: 14px;
+        max-width: min(460px, calc(100vw - 36px)); padding: 7px 11px;
+        overflow: hidden; border: 1px solid rgba(116,169,225,.22);
+        border-radius: 999px; color: rgba(20,69,123,.62);
+        background: rgba(241,249,255,.5); backdrop-filter: blur(8px);
+        font: 700 9px/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+        letter-spacing: .05em; pointer-events: none; text-overflow: ellipsis;
+        white-space: nowrap; user-select: none;
+      }
+    </style>
+  <script src="./runtime.js" defer></script>
+<script src="./portal-bridge.js" defer></script></body>
+</html>
